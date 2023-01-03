@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h1>Register</h1></center>
+<form method="post" action="/about">
+    {% csrf_token %}
+    <div>
+        {% if error %}
+            <div class="alert">
+                <span>{{error}}</span>
+            </div>
+        {% endif %}
+        <input type="text" value ="{{value.usernamez}}" placeholder="username" name="username"><br>
+        <input type="text" value="{{value.first_namez}}" placeholder="firstname" name="first_name"><br>
+        <input type="email" value="{{value.emailz}}" placeholder="email" name="email"><br>
+        <input type="password"  placeholder="password" name="password"><br>
+        <input type="password" placeholder="confirm password" name="con_password"><br>
+        <input type="submit"><br>
+
+    </div>
+</form>
+</body>
+</html>
